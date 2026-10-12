@@ -23,16 +23,16 @@ number-depth: 2
 book:
   title: "COMP/STAT212 Portfolio"
   author: "Anna-Lies Voorham"
-  date: 9/16/2026  # use today to update date published based on last time project was edited
+  date: 10/7/2026  # use today to update date published based on last time project was edited
   date-format: full
   # favicon: path/to/favorite-logo.png
   reader-mode: true
   # site-url: https://site-url
   page-navigation: true
   back-to-top-navigation: true
-  cookie-consent:
-    type: implied
-    style: simple
+  #cookie-consent:
+    #type: implied
+    #style: simple
   # bread-crumbs: true  # causes problems with older Quarto version
   # downloads: [pdf]
   # repo-url: https://repo-url
@@ -62,12 +62,13 @@ book:
 
     - part: "Personal Viz Journey"
       chapters:
+      - pvj/pvj-aboutme.qmd
       - pvj/pvj-01.qmd
 
-    - part: "TidyTuesday"
-      chapters:
-      - tt/2025-07-08.qmd
-      - tt/2025-07-15.qmd
+   # - part: "TidyTuesday"
+      #chapters:
+     # - tt/2025-07-08.qmd
+     # - tt/2025-07-15.qmd
 
     - part: "Pre-Class Learnings"
       chapters:
@@ -75,25 +76,26 @@ book:
 
     - part: "In-Class Activities"
       chapters:
-      - ica/ica-sample1.qmd
-      - ica/ica-sample2.qmd
       - ica/quarto-demo.qmd
       - ica/03-univariate-viz-exercises.qmd
       - ica/04-bivariate-viz-exercises.qmd
       - ica/05-multivariate-viz.qmd
+      - ica/06-spatial-viz.qmd
+      - ica/07-effective-viz.qmd
+      - ica/08-wrangling-verbs.qmd
 
-    - part: "Extras"
-      chapters:
-      - extra/extra-sample1.qmd
-      - extra/extra-sample2.qmd
+   # - part: "Extras"
+   #   chapters:
+   #   - extra/extra-sample1.qmd
+    #  - extra/extra-sample2.qmd
 
 
 
 format:
   html:
     theme: # bootswatch themes--other options https://bootswatch.com/
-      light: flatly
-      dark: darkly
+      light: journal
+      dark: solar
     search: true
     toc: true
     toc-depth: 3
