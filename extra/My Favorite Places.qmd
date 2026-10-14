@@ -1,0 +1,62 @@
+---
+title: "My Favorite Places"
+---
+
+\
+\
+\
+
+I **love** to travel and explore the world. Below I have mapped out some of my favorite places around the world.
+
+```{r}
+library(tidyverse)
+library(openintro)
+library(leaflet)
+```
+
+
+
+```{r}
+favorite_place <- tribble(
+  ~place, ~long, ~lat, ~kind,
+  "Pier 1 NYC", -73.99032601872617, 40.779880630164, "Great View",
+  "Minnehaha Lookout", -93.20115901378624, 44.90870164091678, "Great View",
+  "Hart Beach", 4.264228097396657, 52.10447542040185, "Great View",
+  "North Kingstown Town Beach", -71.44409930684499, 41.56604647024605,"Great View",
+  "Argonaftis Donkey Farm", 32.634076374356084,34.823480002409326,  "Fun Activity",
+  "Manny's Bistro",  -73.97946028150685, 40.77628810178257,"Restaurant",
+  "Taste",-2.7983609247666403,  56.341606885136706, "Restaurant",
+  "Prins Hendrikplein", 4.2945872913453815, 52.08209939149071, "Cute Town/Street",
+  "The Ramble Waterfall", -73.97080506465825, 40.777662580337335, "Great View",
+  "Wijnewoude",  6.158084976076904, 53.03762607123822, "Cute Town/Street",
+  "Lake Forest Beach (Lake Tahoe)", -120.11505162430953, 39.18104731181165, "Great View",
+  "The Nook", -93.15666749004325,  44.926615113536286, "Restaurant",
+  "Wickford Main Street", -71.45270646612809, 41.56945612721664, "Cute Town/Street",
+  "Efteling", 5.04690851600829, 51.65033092393419, "Fun Activity",
+  "Giants Causeway",  -6.512046050458832, 55.241260168865765, "Great View",
+  "The Neo-Futurists", -87.66939418063144, 41.975989890355834, "Fun Activity",
+  "Fasouri Water Park", 32.9747918992501, 34.65261872800867, "Fun Activity",
+  "Nyonya", -73.996922494033, 40.71905340593873, "Restaurant",
+  "Rasa",  -71.45015421181488, 41.66184262725803, "Restaurant",
+  "Carmen's", -122.5834949225532, 37.98588402018178, "Restaurant",
+  "Billy Sushi", -93.26879537612626, 44.98411862149336, "Restaurant"
+  
+)
+
+favorite_place
+```
+
+
+```{r}
+
+leaflet(data = favorite_place) %>%
+  addTiles() %>%
+  addCircleMarkers(color = ~c("red", "blue", "green", "purple")[as.factor(kind)], label = ~place) %>%
+    addLegend(
+    colors = c("red", "blue", "green", "purple"),
+    labels = c("Cute Town/Street", "Fun Activity", "Great View" , "Restaurant"),
+    title = "Place Type")
+
+#I wanted to challenge myself and use a leaflet map. I did this by referring to the leaflet guide made by  rstudio on their website when I was unsure of how to make something work. For example using the (as.factor) argument for the colors.
+
+```

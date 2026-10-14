@@ -83,10 +83,11 @@ book:
       - ica/06-spatial-viz.qmd
       - ica/07-effective-viz.qmd
       - ica/08-wrangling-verbs.qmd
+   #   - ica/09-dates.qmd
 
-   # - part: "Extras"
-   #   chapters:
-   #   - extra/extra-sample1.qmd
+    - part: "Extras"
+      chapters:
+      - extra/My Favorite Places.qmd
     #  - extra/extra-sample2.qmd
 
 

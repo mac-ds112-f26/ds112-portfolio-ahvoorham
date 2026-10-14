@@ -316,6 +316,13 @@ Construct and discuss a plot of the county-level change in Democratic vote perce
 
 ```{r}
 
+ggplot(mn_wi, (aes(x = state_name, y = dem_diff))) +
+  geom_boxplot() +
+  labs(x = "State", 
+       y = "Change In Democratic Support", 
+       title = "Change in Democratic Support in Wisconsin and Minnesota",
+       caption = "Created by Anna-Lies Voorham October 2026",
+       alt = "Boxplots compare changes in Democratic support in Minnesota and Wisconsin. Minnesota has a higher median increase (about 3 points) and greater variability than Wisconsin (about 1.6 points). Both states have high outliers, with Minnesota showing two near 8.5 points and Wisconsin one near 6 points.")
 ```
 
 
@@ -330,14 +337,14 @@ Let's talk about the last 2 verbs. `summarize()` (or equivalently `summarise()`)
 
 ```{r}
 # What does this do?
-# elections_small |> 
-#   summarize(median(repub_pct_20))
+elections_small |> 
+  summarize(median(repub_pct_20))
 ```
 
 ```{r}
 # What does this do?
-# elections_small |> 
-#   summarize(median_repub = median(repub_pct_20))
+elections_small |> 
+  summarize(median_repub = median(repub_pct_20))
 ```
 
 ```{r}
