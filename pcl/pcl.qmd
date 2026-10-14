@@ -9,3 +9,28 @@ title: "Pre-Class Learning Summaries"
 ## Quarto
 
 ![from qmd4sci.njtierney.com](0810-quarto.jpeg)
+
+
+## Univariate Viz
+
+![](PCL_1.png)
+
+## Bivariate Viz
+
+![](PCL_2.png)
+
+## Multivariate Viz
+
+![](PCL_3.png)
+
+## Spacial Viz
+
+![](PCL_4.png)
+
+## Effective Viz
+
+![](PCL_5.png)
+
+## Data Wrangling
+
+![](PCL_6.png)

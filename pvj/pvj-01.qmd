@@ -2,4 +2,16 @@
 title: "Personal Visualization Journey"
 ---
 
-Add content here
+```{r}
+library(jsonlite)
+library(tidyverse)
+spotify<-fromJSON("Spotify_Data.json")
+```
+
+```{r}
+head(spotify)
+
+spotify%>%
+summarize(sum_played = sum(msPlayed))
+```
+
